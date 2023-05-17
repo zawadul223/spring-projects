@@ -20,6 +20,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests()
                 .requestMatchers("/user/register")
                 .permitAll()
+                .requestMatchers("/hello/**")
+                .permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
